@@ -17,6 +17,9 @@ public class Enemy {
     public String getName(){
         return this.name;
     }
+    public void setName(String name){
+        this.name =  name;
+    }
     public boolean getDead(){
         return this.dead;
     }
@@ -43,7 +46,7 @@ public class Enemy {
     public void attack(Hero hero){
         if (this.dead == false){
             int damage = (int)(Math.random() * attack);
-            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.name, damage);
+            System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, hero.getName(), damage);
             hero.wounded(damage);
         }
     }

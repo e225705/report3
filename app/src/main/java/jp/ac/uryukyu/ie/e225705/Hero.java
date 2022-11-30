@@ -33,6 +33,15 @@ public class Hero {
      * attackに応じて乱数でダメージを算出し、hero.wounded()によりダメージ処理を実行。
      * @param e 攻撃対象
      */
+    public String getName(){
+        return this.name;
+    }
+    public void setName(String name){
+        this.name =  name;
+    }
+    public boolean getDead(){
+        return this.dead;
+    }
     public void attack(Enemy e){
         int damage = (int)(Math.random() * attack);
         System.out.printf("%sの攻撃！%sに%dのダメージを与えた！！\n", name, e.getName(), damage);
